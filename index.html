@@ -20,6 +20,13 @@
     <p>Your Personal Menstrual Wellness Companion</p>
 
 </header>
+    <section class="card">
+
+    <h2>🌸 Daily Motivation</h2>
+
+    <div id="dailyQuote"></div>
+
+</section>
 
 <div class="container">
 
@@ -148,6 +155,15 @@
                 type="number"
                 id="water"
                 placeholder="Glasses of water">
+            <div class="progress">
+
+        <div class="progress-bar" id="waterProgress">
+
+            0/8 Glasses
+
+        </div>
+
+    </div>
 
     </section>
 
@@ -206,6 +222,19 @@
         </button>
 
     </section>
+    <!-- Wellness Score -->
+
+<section class="card">
+
+    <h2>🌸 Wellness Score</h2>
+
+    <div id="wellnessScore">
+
+        0%
+
+    </div>
+
+</section>
 
     <!-- History -->
 
@@ -218,6 +247,11 @@
             No records yet.
 
         </div>
+         <button onclick="clearHistory()" class="saveBtn">
+
+        🗑️ Clear History
+
+    </button>
 
     </section>
 
