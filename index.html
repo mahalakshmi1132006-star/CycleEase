@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CycleEase - Menstrual Wellness Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+    <h1>🌸 CycleEase</h1>
+
+    <p>Your Personal Menstrual Wellness Companion</p>
+
+</header>
+
+<div class="container">
+
+    <!-- User Details -->
+
+    <section class="card">
+
+        <h2>User Details</h2>
+
+        <label>Name</label>
+
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label>Age</label>
+
+        <input type="number" id="age" placeholder="Enter age">
+
+    </section>
+
+    <!-- Cycle Details -->
+
+    <section class="card">
+
+        <h2>Cycle Information</h2>
+
+        <label>Last Period Date</label>
+
+        <input type="date" id="lastPeriod">
+
+        <label>Cycle Length</label>
+
+        <select id="cycleLength">
+
+            <option value="21">21 Days</option>
+            <option value="24">24 Days</option>
+            <option value="26">26 Days</option>
+            <option value="28" selected>28 Days</option>
+            <option value="30">30 Days</option>
+            <option value="32">32 Days</option>
+
+        </select>
+
+    </section>
+
+    <!-- Pain -->
+
+    <section class="card">
+
+        <h2>Pain Level</h2>
+
+        <input type="range"
+               min="0"
+               max="10"
+               value="0"
+               id="painSlider">
+
+        <h3 id="painValue">0</h3>
+
+    </section>
+
+    <!-- Mood -->
+
+    <section class="card">
+
+        <h2>Mood</h2>
+
+        <select id="mood">
+
+            <option>😊 Happy</option>
+            <option>😐 Normal</option>
+            <option>😢 Sad</option>
+            <option>😡 Irritated</option>
+            <option>😴 Tired</option>
+
+        </select>
+
+    </section>
+
+    <!-- Flow -->
+
+    <section class="card">
+
+        <h2>Flow</h2>
+
+        <select id="flow">
+
+            <option>Light</option>
+            <option>Medium</option>
+            <option>Heavy</option>
+
+        </select>
+
+    </section>
+
+    <!-- Symptoms -->
+
+    <section class="card">
+
+        <h2>Symptoms</h2>
+
+        <div class="checkbox">
+
+            <label><input type="checkbox" value="Cramps"> Cramps</label>
+
+            <label><input type="checkbox" value="Headache"> Headache</label>
+
+            <label><input type="checkbox" value="Back Pain"> Back Pain</label>
+
+            <label><input type="checkbox" value="Fatigue"> Fatigue</label>
+
+            <label><input type="checkbox" value="Nausea"> Nausea</label>
+
+            <label><input type="checkbox" value="Bloating"> Bloating</label>
+
+        </div>
+
+    </section>
+
+    <!-- Water -->
+
+    <section class="card">
+
+        <h2>Water Intake</h2>
+
+        <input
+                type="number"
+                id="water"
+                placeholder="Glasses of water">
+
+    </section>
+
+    <!-- Food Recommendation -->
+
+    <section class="card">
+
+        <h2>Food Recommendation</h2>
+
+        <div id="foodRecommendation">
+
+            Select pain level to get food suggestions.
+
+        </div>
+
+    </section>
+
+    <!-- Self Care -->
+
+    <section class="card">
+
+        <h2>Self Care Tips</h2>
+
+        <div id="tips">
+
+            Tips will appear here.
+
+        </div>
+
+    </section>
+
+    <!-- Prediction -->
+
+    <section class="card">
+
+        <h2>Next Period Prediction</h2>
+
+        <button onclick="predictPeriod()">
+
+            Predict
+
+        </button>
+
+        <h3 id="prediction"></h3>
+
+    </section>
+
+    <!-- Save -->
+
+    <section class="card">
+
+        <button class="saveBtn" onclick="saveData()">
+
+            Save Today's Record
+
+        </button>
+
+    </section>
+
+    <!-- History -->
+
+    <section class="card">
+
+        <h2>History</h2>
+
+        <div id="history">
+
+            No records yet.
+
+        </div>
+
+    </section>
+
+</div>
+
+<footer>
+
+    <p>
+
+        ❤️ CycleEase | Educational Wellness Tracker
+
+    </p>
+
+    <small>
+
+        This application provides wellness suggestions only and is not a substitute for professional medical advice.
+
+    </small>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
